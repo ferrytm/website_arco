@@ -2451,3 +2451,192 @@ textarea.form-control {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ============================================
+   Financial Report Components
+   ============================================ */
+
+/* Weekly report card */
+.finance-week-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+  overflow: hidden;
+}
+
+.finance-week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) var(--space-xl);
+  background: linear-gradient(135deg, var(--primary-50), rgba(255,255,255,0));
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.finance-week-header .week-label {
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--text);
+}
+
+.finance-week-header .week-summary {
+  display: flex;
+  gap: var(--space-lg);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.finance-week-header .week-summary .income { color: var(--success); }
+.finance-week-header .week-summary .expense { color: var(--danger); }
+.finance-week-header .week-summary .balance {
+  color: var(--primary);
+  padding: 2px 12px;
+  background: var(--primary-50);
+  border-radius: var(--radius-full);
+}
+
+.finance-week-card .table-wrapper { padding: 0; }
+.finance-week-card .table { margin-bottom: 0; }
+
+/* Compact table */
+.table-compact th,
+.table-compact td {
+  padding: 8px 12px;
+  font-size: var(--text-xs);
+}
+
+/* Category bar charts */
+.category-bar-item {
+  margin-bottom: var(--space-lg);
+}
+
+.category-bar-item .cat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.category-bar-item .cat-name {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--text);
+}
+
+.category-bar-item .cat-amount {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--text);
+}
+
+.category-bar-item .cat-bar-bg {
+  height: 8px;
+  background: var(--border-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-xs);
+}
+
+.category-bar-item .cat-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-bar-item .cat-bar.income {
+  background: linear-gradient(90deg, var(--success), #34d399);
+}
+
+.category-bar-item .cat-bar.expense {
+  background: linear-gradient(90deg, var(--danger), #f87171);
+}
+
+.category-bar-item .cat-count {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Batch entry rows */
+.batch-row {
+  display: grid;
+  grid-template-columns: 140px 100px 1fr 120px 140px 40px;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  align-items: center;
+}
+
+.batch-row .form-control {
+  padding: 8px 10px;
+  font-size: var(--text-xs);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--danger), #dc2626);
+  color: white;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  transition: all var(--transition-fast);
+}
+
+.btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Badge success/danger */
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Code in tables */
+.table code {
+  background: var(--primary-50);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  color: var(--primary-dark);
+  font-family: 'Courier New', monospace;
+}
+
+@media (max-width: 768px) {
+  .batch-row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+    background: var(--primary-50);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .batch-row .form-control:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .finance-week-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .finance-week-header .week-summary {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .category-bar-item .cat-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

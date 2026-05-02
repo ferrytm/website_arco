@@ -1,0 +1,33 @@
+{
+  "ringkasan": {
+    "totalPemasukan": 85750000,
+    "totalPengeluaran": 62340000,
+    "saldo": 23410000
+  },
+  "bulanan": [
+    { "bulan": "Jan", "pemasukan": 12500000, "pengeluaran": 9800000 },
+    { "bulan": "Feb", "pemasukan": 11800000, "pengeluaran": 10200000 },
+    { "bulan": "Mar", "pemasukan": 14200000, "pengeluaran": 11500000 },
+    { "bulan": "Apr", "pemasukan": 13750000, "pengeluaran": 9840000 },
+    { "bulan": "Mei", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Jun", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Jul", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Agu", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Sep", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Okt", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Nov", "pemasukan": 0, "pengeluaran": 0 },
+    { "bulan": "Des", "pemasukan": 0, "pengeluaran": 0 }
+  ],
+  "transaksi": [
+    { "id": 1, "tanggal": "2026-04-06", "keterangan": "Persembahan Ibadah Minggu", "jenis": "masuk", "jumlah": 8500000, "kategori": "Persembahan", "noBukti": "PM-2026-001", "catatan": "" },
+    { "id": 2, "tanggal": "2026-04-06", "keterangan": "Kolekte Ibadah", "jenis": "masuk", "jumlah": 3200000, "kategori": "Kolekte", "noBukti": "PM-2026-002", "catatan": "" },
+    { "id": 3, "tanggal": "2026-04-05", "keterangan": "Pembayaran Listrik Gereja", "jenis": "keluar", "jumlah": 1850000, "kategori": "Operasional", "noBukti": "PK-2026-001", "catatan": "PLN April 2026" },
+    { "id": 4, "tanggal": "2026-04-04", "keterangan": "Sumbangan Pembangunan", "jenis": "masuk", "jumlah": 5000000, "kategori": "Sumbangan", "noBukti": "PM-2026-003", "catatan": "" },
+    { "id": 5, "tanggal": "2026-04-03", "keterangan": "Gaji Koster", "jenis": "keluar", "jumlah": 3500000, "kategori": "Gaji", "noBukti": "PK-2026-002", "catatan": "Gaji bulan April" },
+    { "id": 6, "tanggal": "2026-04-02", "keterangan": "Dana Diakonia", "jenis": "keluar", "jumlah": 2000000, "kategori": "Diakonia", "noBukti": "PK-2026-003", "catatan": "" },
+    { "id": 7, "tanggal": "2026-04-01", "keterangan": "Perpuluhan Jemaat", "jenis": "masuk", "jumlah": 4500000, "kategori": "Perpuluhan", "noBukti": "PM-2026-004", "catatan": "" },
+    { "id": 8, "tanggal": "2026-03-30", "keterangan": "Pembelian Alat Kebersihan", "jenis": "keluar", "jumlah": 750000, "kategori": "Operasional", "noBukti": "PK-2026-004", "catatan": "" },
+    { "id": 9, "tanggal": "2026-03-29", "keterangan": "Persembahan Ibadah Minggu", "jenis": "masuk", "jumlah": 7800000, "kategori": "Persembahan", "noBukti": "PM-2026-005", "catatan": "" },
+    { "id": 10, "tanggal": "2026-03-28", "keterangan": "Perbaikan Sound System", "jenis": "keluar", "jumlah": 4500000, "kategori": "Fasilitas", "noBukti": "PK-2026-005", "catatan": "Service speaker + mixer" }
+  ]
+}

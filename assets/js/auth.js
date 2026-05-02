@@ -1,5 +1,6 @@
 /* ================================================
-   HKBP ARCO — Auth Module
+   HKBP ARCO — Auth Module (with hashed passwords)
+   Credentials loaded from separated users.json
    ================================================ */
 
 const Auth = {
@@ -7,16 +8,17 @@ const Auth = {
 
   // Permission matrix
   permissions: {
-    admin:       { khotbah: 'full', renungan: 'full', jadwal: 'full', dokumentasi: 'full', blog: 'full', keuangan: 'full', warta: 'full', tataIbadah: 'full', dashboard: true },
-    pendeta:     { khotbah: 'write', renungan: 'write', jadwal: 'read', dokumentasi: 'read', blog: 'write', keuangan: 'read', warta: 'read', tataIbadah: 'read', dashboard: true },
-    bendahara:   { khotbah: 'read', renungan: 'read', jadwal: 'read', dokumentasi: 'read', blog: 'read', keuangan: 'full', warta: 'read', tataIbadah: 'read', dashboard: true },
-    sekretaris:  { khotbah: 'write', renungan: 'write', jadwal: 'write', dokumentasi: 'write', blog: 'write', keuangan: 'read', warta: 'full', tataIbadah: 'full', dashboard: true },
-    kontributor: { khotbah: 'write', renungan: 'write', jadwal: 'read', dokumentasi: 'write', blog: 'write', keuangan: 'read', warta: 'read', tataIbadah: 'read', dashboard: true },
-    jemaat:      { khotbah: 'read', renungan: 'read', jadwal: 'read', dokumentasi: 'read', blog: 'read', keuangan: 'read', warta: 'read', tataIbadah: 'read', dashboard: false },
+    admin:       { khotbah: 'full', renungan: 'full', jadwal: 'full', dokumentasi: 'full', blog: 'full', keuangan: 'full', warta: 'full', tataIbadah: 'full', users: 'full', dashboard: true },
+    pendeta:     { khotbah: 'write', renungan: 'write', jadwal: 'read', dokumentasi: 'read', blog: 'write', keuangan: 'read', warta: 'read', tataIbadah: 'read', users: 'none', dashboard: true },
+    bendahara:   { khotbah: 'read', renungan: 'read', jadwal: 'read', dokumentasi: 'read', blog: 'read', keuangan: 'full', warta: 'read', tataIbadah: 'read', users: 'none', dashboard: true },
+    sekretaris:  { khotbah: 'write', renungan: 'write', jadwal: 'write', dokumentasi: 'write', blog: 'write', keuangan: 'read', warta: 'full', tataIbadah: 'full', users: 'none', dashboard: true },
+    kontributor: { khotbah: 'write', renungan: 'write', jadwal: 'read', dokumentasi: 'write', blog: 'write', keuangan: 'read', warta: 'read', tataIbadah: 'read', users: 'none', dashboard: true },
+    jemaat:      { khotbah: 'read', renungan: 'read', jadwal: 'read', dokumentasi: 'read', blog: 'read', keuangan: 'read', warta: 'read', tataIbadah: 'read', users: 'none', dashboard: false },
   },
 
-  login(username, password) {
-    const user = AppData.users.find(u => u.username === username && u.password === password);
+  async login(username, password) {
+    const hash = await DataStorage.hashPassword(password);
+    const user = AppData.users.find(u => u.username === username && u.passwordHash === hash);
     if (user) {
       const sessionUser = { id: user.id, name: user.name, role: user.role, initial: user.initial, username: user.username };
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(sessionUser));
@@ -42,14 +44,13 @@ const Auth = {
   },
 
   hasPermission(section, level) {
-    // level: 'read' | 'write' | 'full'
     const user = this.getCurrentUser();
     if (!user) return false;
     const perm = this.permissions[user.role];
     if (!perm) return false;
     const sectionPerm = perm[section];
     if (!sectionPerm) return false;
-    if (level === 'read') return true; // all logged-in users can read
+    if (level === 'read') return true;
     if (level === 'write') return sectionPerm === 'write' || sectionPerm === 'full';
     if (level === 'full') return sectionPerm === 'full';
     return false;
@@ -63,7 +64,7 @@ const Auth = {
   },
 
   canAccess(section) {
-    if (section !== 'keuangan') return true; // public pages
+    if (section !== 'keuangan') return true;
     return this.isLoggedIn();
   },
 

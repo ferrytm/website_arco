@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "judul": "Sejarah Singkat HKBP ARCO",
+    "penulis": "Admin Gereja",
+    "tanggal": "2026-03-20",
+    "kategori": "Sejarah",
+    "ringkasan": "Mengenal lebih dekat perjalanan berdirinya HKBP ARCO dari awal hingga saat ini, dari persekutuan kecil hingga menjadi jemaat yang bertumbuh.",
+    "isi": "HKBP ARCO didirikan atas dasar kerinduan jemaat Batak di wilayah ARCO untuk memiliki tempat ibadah sendiri. Bermula dari persekutuan kecil di rumah salah satu jemaat, gereja ini terus bertumbuh dan berkembang. Dengan semangat \"Horas\" dan iman yang teguh, jemaat bergotong royong membangun gedung gereja. Kini HKBP ARCO telah menjadi bagian penting dari pelayanan HKBP di Jakarta, melayani ratusan jemaat dari berbagai latar belakang.",
+    "tags": ["sejarah", "HKBP", "gereja"]
+  },
+  {
+    "id": 2,
+    "judul": "Makna Paskah bagi Kehidupan Kristen",
+    "penulis": "Pdt. Marnala Silitonga",
+    "tanggal": "2026-04-01",
+    "kategori": "Rohani",
+    "ringkasan": "Merenungkan makna sejati perayaan Paskah - kemenangan Kristus atas kematian dan dampaknya bagi kehidupan kita setiap hari.",
+    "isi": "Paskah bukan sekadar hari libur atau tradisi tahunan. Paskah adalah perayaan atas kemenangan terbesar dalam sejarah manusia - kebangkitan Yesus Kristus dari kematian. Melalui kebangkitan-Nya, Yesus telah mengalahkan kuasa maut dan dosa, memberikan pengharapan hidup kekal bagi semua yang percaya kepada-Nya. Setiap hari, kita hidup dalam terang kebangkitan Kristus.",
+    "tags": ["paskah", "rohani", "renungan"]
+  },
+  {
+    "id": 3,
+    "judul": "Tips Menjaga Kesehatan Rohani Keluarga",
+    "penulis": "Sdr. Renaldo Manalu",
+    "tanggal": "2026-03-15",
+    "kategori": "Keluarga",
+    "ringkasan": "Panduan praktis untuk membangun kehidupan rohani yang sehat dalam keluarga melalui ibadah keluarga, doa bersama, dan komunikasi.",
+    "isi": "Keluarga adalah gereja kecil yang Tuhan percayakan kepada kita. Untuk menjaga kesehatan rohani keluarga, ada beberapa hal penting: Pertama, luangkan waktu untuk ibadah keluarga secara rutin. Kedua, biasakan berdoa bersama sebelum makan dan sebelum tidur. Ketiga, ciptakan komunikasi terbuka tentang iman dan pergumulan. Keempat, terlibat aktif dalam pelayanan gereja sebagai keluarga.",
+    "tags": ["keluarga", "rohani", "tips"]
+  },
+  {
+    "id": 4,
+    "judul": "Partangiangan: Kekuatan Doa dalam Budaya Batak",
+    "penulis": "St. P. Manalu",
+    "tanggal": "2026-03-08",
+    "kategori": "Budaya",
+    "ringkasan": "Menggali makna partangiangan (doa) dalam budaya Batak dan bagaimana tradisi ini diperkaya oleh iman Kristen.",
+    "isi": "Dalam budaya Batak, partangiangan memiliki posisi yang sangat penting. Doa dipanjatkan di setiap momen penting kehidupan - kelahiran, pernikahan, bahkan kematian. Ketika iman Kristen datang ke Tanah Batak melalui para misionaris, tradisi doa ini tidak hilang tetapi justru diperkaya. Partangiangan menjadi perpaduan indah antara warisan budaya dan iman Kristen yang hidup.",
+    "tags": ["budaya", "batak", "doa"]
+  }
+]

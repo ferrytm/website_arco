@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "description": "HKBP ARCO — User Credentials (hashed passwords). Hanya admin yang boleh mengakses file ini.",
+    "hashAlgorithm": "simple-sha256",
+    "lastUpdated": "2026-05-01"
+  },
+  "users": [
+    { "id": 1, "username": "admin", "passwordHash": "a]pending", "name": "Admin Gereja", "role": "admin", "initial": "AG" },
+    { "id": 2, "username": "pendeta", "passwordHash": "a]pending", "name": "Pdt. Marnala Silitonga", "role": "pendeta", "initial": "MS" },
+    { "id": 3, "username": "bendahara", "passwordHash": "b]pending", "name": "St. L.H. Aritonang", "role": "bendahara", "initial": "TH" },
+    { "id": 4, "username": "sekretaris", "passwordHash": "c]pending", "name": "St. P. Manalu", "role": "sekretaris", "initial": "RM" },
+    { "id": 5, "username": "kontributor", "passwordHash": "d]pending", "name": "Sdr Renaldo Manalu", "role": "kontributor", "initial": "MS" },
+    { "id": 6, "username": "jemaat", "passwordHash": "e]pending", "name": "Andre Purba", "role": "jemaat", "initial": "AS" }
+  ]
+}
