@@ -2124,7 +2124,7 @@
 
     // Export JSON
     $('#btn-export-keuangan-json')?.addEventListener('click', () => {
-      DataStorage.exportJSON(AppData.keuangan, \`keuangan_hkbp_arco_\${new Date().toISOString().slice(0,10)}.json\`);
+      DataStorage.exportJSON(AppData.keuangan, `keuangan_hkbp_arco_${new Date().toISOString().slice(0,10)}.json`);
       showToast('Data keuangan berhasil diunduh!', 'success');
     });
 
@@ -2161,7 +2161,7 @@
               tanggal = d.toISOString().slice(0, 10);
             } else if (typeof tanggal === 'string' && tanggal.includes('/')) {
               const p = tanggal.split('/');
-              if (p.length === 3) tanggal = \`\${p[2]}-\${p[1].padStart(2,'0')}-\${p[0].padStart(2,'0')}\`; // asumsi DD/MM/YYYY
+              if (p.length === 3) tanggal = `${p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`; // asumsi DD/MM/YYYY
             } else if (!tanggal) {
                 tanggal = new Date().toISOString().slice(0,10);
             }
@@ -2194,7 +2194,7 @@
           if (importedCount > 0) {
             AppData.keuangan.ringkasan.saldo = AppData.keuangan.ringkasan.totalPemasukan - AppData.keuangan.ringkasan.totalPengeluaran;
             DataStorage.persistKeuangan();
-            showToast(\`\${importedCount} transaksi berhasil diimpor dari Excel!\`, 'success');
+            showToast(`${importedCount} transaksi berhasil diimpor dari Excel!`, 'success');
             renderBendaharaPanel(container);
           } else {
             showToast('Tidak ada data valid yang bisa diimpor.', 'warning');
